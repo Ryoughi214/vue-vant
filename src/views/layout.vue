@@ -1,30 +1,25 @@
 <template>
   <div class="h5-wrapper">
-    <router-view></router-view>
+    <div class="content">
+      <router-view></router-view>
+    </div>
+    <nav class="tabbar">
+      <router-link to="/article">面经</router-link>
+      <router-link to="/collect">收藏</router-link>
+      <router-link to="/like">喜欢</router-link>
+      <router-link to="/user">我的</router-link>
+    </nav>
   </div>
 </template>
 
 <script>
-// 导入axios
-import axios from "axios"
-
 export default {
-  name: 'h5-wrapper',
-  // 1.数据
-  data() {
-    return {
-      articles: [],
-    };
-  },
-  // created 钩子
-  async created() {
-  
-  },
+  name: 'LayoutPage'
 }
 </script>
 
 <style>
-body{
+body {
   margin: 0;
   padding: 0;
 }
