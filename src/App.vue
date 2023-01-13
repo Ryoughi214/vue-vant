@@ -5,22 +5,9 @@
 </template>
 
 <script>
-// 导入axios
-import axios from "axios"
 
 export default {
   name: 'h5-wrapper',
-  // 1.数据
-  data() {
-    return {
-      articles: [],
-    };
-  },
-  // created 钩子
-  async created() {
-  const { data } = await axios.get("https://mock.boxuegu.com/mock/3083/articles")
-  this.articles = data.result.rows
-},
 }
 </script>
 

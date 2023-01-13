@@ -18,6 +18,7 @@ const routes = [
   // 重定向
 { path: '/', redirect:'/layout' },
 { path: '/layout', component: layout , children:[
+  { path: '/', redirect: '/article' },
   { path: '/article', component: article },
   { path: 'collect', component:collect },
   { path: 'like', component:like },
