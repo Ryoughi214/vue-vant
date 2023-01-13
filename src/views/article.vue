@@ -1,23 +1,23 @@
 <template>
   <div class="article-page" >
     <div
-
+    @click="$router.push(`/detail/${item.id}`)"
     v-for="( item ) in lists" :key="item.id"
     class="article-item">
       <div class="head">
         <img
-          src="http://teachoss.itheima.net/heimaQuestionMiniapp/%E5%AE%98%E6%96%B9%E9%BB%98%E8%AE%A4%E5%A4%B4%E5%83%8F%402x.png"
+          :src="item.creatorAvatar"
           alt=""
         />
         <div class="con">
           <p class="title">{{ item.stem }}</p>
-          <p class="other">{{ item.creatorName | item.createdAt }}</p>
+          <p class="other">{{ item.creatorName}} | {{ item.createdAt }}</p>
         </div>
       </div>
       <div class="body">
       {{ item.content }}
       </div>
-      <div class="foot">点赞 44 | 浏览 315</div>
+      <div class="foot">点赞 {{ item.likeCount }}| 浏览 {{ item.views}}</div>
     </div>
   </div>
 </template>

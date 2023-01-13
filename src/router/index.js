@@ -20,11 +20,13 @@ const routes = [
 { path: '/layout', component: layout , children:[
   { path: '/', redirect: '/article' },
   { path: '/article', component: article },
-  { path: 'collect', component:collect },
-  { path: 'like', component:like },
-  { path: 'user', component:user },
+  { path: '/collect', component:collect },
+  { path: '/like', component:like },
+  { path: '/user', component:user },
 ]},
-{ path: 'detail', component: detail },
+{ path: '/detail', component: detail },
+// 声明式导航
+{ path: '/detail/:id', component: detail },
 ]
 
 const router = new VueRouter({
