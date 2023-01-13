@@ -19,7 +19,7 @@ export default {
   // created 钩子
   async created() {
   const { data } = await axios.get("https://mock.boxuegu.com/mock/3083/articles")
-  this.list = data.result.rows
+  this.articles = data.result.rows
 },
 }
 </script>
